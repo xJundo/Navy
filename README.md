@@ -32,6 +32,7 @@ Maps must be in this form :
 3:D4:F4
 4:B5:B8
 5:D7:H7
+[length]:[start_position]:[end_position]
 
 ```
 Launch the game with:
