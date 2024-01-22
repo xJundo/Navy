@@ -35,3 +35,5 @@ FIRST USER :
 SECOND USER :
 ./my_navy [pid from first user] navy_positions
 ```
+## Winning the Game 🏆
+The game concludes when all of a player's ships are hit. The terminal announces the winner.
