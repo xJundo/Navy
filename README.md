@@ -26,6 +26,14 @@ A modern twist on Battleship, challenging players to strategize in a terminal-ba
 - **Linux Signals**: Familiarity with SIGUSER1 and SIGUSER2 signals is required.
 
 ## How to Use 🖥️
+Maps must be in this form :
+```bash
+2:C1:C2
+3:D4:F4
+4:B5:B8
+5:D7:H7
+
+```
 Launch the game with:
 ```bash
 FIRST USER :
