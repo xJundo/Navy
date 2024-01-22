@@ -26,7 +26,7 @@ A modern twist on Battleship, challenging players to strategize in a terminal-ba
 - **Linux Terminal**
 
 ## How to Use 🖥️
-Maps must be in this form :
+Maps must have 4 lengths and must be in this form :
 ```bash
 2:C1:C2
 3:D4:F4
