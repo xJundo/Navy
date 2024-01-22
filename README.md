@@ -38,11 +38,11 @@ Maps must be in this form :
 Launch the game with:
 ```bash
 FIRST USER :
-./my_navy navy_positions
+make && ./my_navy navy_positions
 ```
 ```bash
 SECOND USER :
-./my_navy [pid from first user] navy_positions
+make && ./my_navy [pid from first user] navy_positions
 ```
 ## Winning the Game 🏆
 The game concludes when all of a player's ships are hit. The terminal announces the winner.
