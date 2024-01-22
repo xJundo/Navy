@@ -23,7 +23,7 @@ A modern twist on Battleship, challenging players to strategize in a terminal-ba
 ## Prerequisites 📋
 - **GCC**: The game is developed in C.
 - **Makefile**: For compiling with specific rules.
-- **Linux System**
+- **Linux Terminal**
 
 ## How to Use 🖥️
 Maps must be in this form :
