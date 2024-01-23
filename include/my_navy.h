@@ -45,7 +45,7 @@ typedef struct user {
 //Maps
 char **create_map(nodes_t **ships, int empty);
 void print_map(char **map, int my);
-int check_line(char *attack, size_t len);
+int check_line(char *attack);
 int wait_signal(void);
 
 //Sig handling

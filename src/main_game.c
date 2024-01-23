@@ -56,24 +56,21 @@ void print_map(char **map, int my)
     }
 }
 
-int check_line(char *attack, size_t len)
+int check_line(char *attack)
 {
-    int failure = 0;
-
-    if (my_strlen(attack) != 3 || (attack[0] < 'A' || attack[0] > 'H')
-        || (attack[1] < '1' || attack[1] > '8'))
-        failure = 1;
-    while (failure) {
-        my_printf("wrong position\nattack : ");
-        free(attack);
-        attack = NULL;
-        len = 0;
-        getline(&attack, &len, stdin);
-        if (my_strlen(attack) != 3 || (attack[0] < 'A' || attack[0] > 'H')
+    while (1) {
+        my_printf("attack: ");
+        attack[0] = 1;
+        attack[1] = 1;
+        attack[2] = 1;
+        attack[3] = 1;
+        read(0, attack, 1000);
+        if (attack[2] != '\n' || attack[3] != 1
+            || (attack[0] < 'A' || attack[0] > 'H')
             || (attack[1] < '1' || attack[1] > '8'))
-            failure = 1;
+            my_printf("wrong position\n");
         else
-            failure = 0;
+            break;
     }
     return CONTINUE;
 }

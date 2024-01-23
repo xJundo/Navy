@@ -10,7 +10,7 @@
 
 extern users_t users;
 
-int receive_and_send(char *attack, size_t len)
+int receive_and_send(char *attack)
 {
     if (!users.my_turn) {
         my_printf("waiting for enemy's attack...\n");
@@ -18,9 +18,7 @@ int receive_and_send(char *attack, size_t len)
         check_win();
         users.my_turn = 1;
     } else {
-        my_printf("attack : ");
-        getline(&attack, &len, stdin);
-        check_line(attack, len);
+        check_line(attack);
         send_attack(attack);
         my_printf("%c%c: ", attack[0], attack[1]);
         wait_result(attack);
@@ -32,8 +30,7 @@ int receive_and_send(char *attack, size_t len)
 
 int print_usr(void)
 {
-    char *attack = NULL;
-    size_t len = 0;
+    char attack[4] = {1};
 
     signal(SIGUSR1, zero);
     signal(SIGUSR2, one);
@@ -42,7 +39,7 @@ int print_usr(void)
             print_map(users.map, 1);
             print_map(users.map_enemy, 0);
         }
-        receive_and_send(attack, len);
+        receive_and_send(attack);
         users.col = 0;
         users.line = 0;
         users.print_map = !users.print_map;
